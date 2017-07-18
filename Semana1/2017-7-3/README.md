@@ -63,21 +63,29 @@ rm -rf .git     // eliminar repositorio git
 mkdir   // Crear carpeta nueva
 
 ```
-[][[][]]
+
 ##Git
 
 It lets you save a snapshot of your complete project at any time you want.
 
+[Git Cheat Sheet](http://files.zeroturnaround.com/pdf/zt_git_cheat_sheet.pdf)
 ```
 git init    // crear un repositorio git
 git status  // muestra si hay un repositorio git
-git add fileName    // Mete un file especifico en el "staging area".
+git add <fileName>    // Mete un file especifico en el "staging area".
 git add --all   // Mete todos los files en el "staging area".
-git add '*.fileType'    // Mete todos los files de un tipo (.txt; .jpg; .js)
+git add '*.<fileType>'    // Mete todos los files de un tipo (.txt; .jpg; .js)
                           en el "staging area".
-git comitt -m "comentario" // Mete los files en el repositorio y le da un nombre al actual estado del proyecto.
+git reset <fileName> // sacar un file del "staging area".
+git comitt -m "<comentario>" // Mete los files en el repositorio y le da un    
+                                nombre al actual estado del proyecto.
+git checkout -- <target> // Para devolver un file al stado del antiguo commit.
+git branch <brach name> // Copia del codigo para trabajar sobre ella que
+                           luego se puede unir al original.
+git checkout <brach name> // Cambiar de branchs.
+git branch -d <branch name> // Borra un branch.
 git log     // Informa de cuantas modificaciones se le han echo al repositorio 
-            y quien las ha echo
+               y quien las ha echo
 git log --stat  // Informa de cuantas modificaciones se le han echo al 
                 repositorio, quien las ha echo y que modificaciones se han echo.
 git diff    //
